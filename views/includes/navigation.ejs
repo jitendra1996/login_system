@@ -1,0 +1,17 @@
+<nav class="navigation">
+    <ul>
+        <li>
+            <a href="<%= path === '/' ? '/registration': '/' %>">
+                <% if(path==='/' ){ %>
+                    Registration
+                    <% }else if(path==="/homepage" ){ %>
+                        Logout
+                        <% }else if(path==="/registration" ){ %>
+                            Login
+                            <%}else{%>
+                                Back To Home Page
+                                <%}%>
+            </a>
+        </li>
+    </ul>
+</nav>

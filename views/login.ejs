@@ -1,0 +1,17 @@
+<%- include('includes/header',pageTitle) %>
+    <%- include('includes/navigation',path) %>
+        <h1>Login page</h1>
+        <form action="/homepage" method="post" class="loginForm">
+            <div>
+                <div>
+                    <label for="email">Email ID</label>
+                    <input type="email" name="emailId" id="email">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <button class="btn" type="submit">Login</button>
+            </div>
+        </form>
+        <%- include("includes/footer")%>
