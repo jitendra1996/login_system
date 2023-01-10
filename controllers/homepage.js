@@ -9,7 +9,8 @@ exports.getHomePage = (req, res) => {
         }
         return res.render('home_page', {
             pageTitle: "Profile Page",
-            path: "/homepage"
+            path: "/homepage",
+            emailId: `${req.body.email}`
         });
     }
     else if (req.body.emailId && req.body.password) {
@@ -17,7 +18,8 @@ exports.getHomePage = (req, res) => {
         console.log("Password : ", req.body.password);
         return res.render('home_page', {
             pageTitle: "Profile Page",
-            path: "/homepage"
+            path: "/homepage",
+            emailId: `${req.body.emailId}`
         });
     }
     return res.status(404).render("404", {
