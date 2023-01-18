@@ -3,6 +3,8 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const routes = require("./routes/login");
 
+const mongoConnect = require('./util/database');
+
 const app = express();
 
 app.set("view engine", "ejs");
@@ -20,4 +22,7 @@ app.get("*", (req, res) => {
     });
 })
 
-app.listen(3001, () => console.log("server is running on port number 3001"));
+mongoConnect(client => {
+    console.log(client);
+    app.listen(3001, () => console.log("server is running on port number 3001"));
+})
